@@ -5,15 +5,28 @@
     <title>title</title>
     <style>
       .container {
-        position: absolute;
         display: grid;
-        width: 90vw;
-        height: auto;
+        grid-template-rows: auto;
+        grid-template-columns: 1 fr 2fr 1fr;
+        grid-row-gap: 15%;
+        grid-template-areas: 
+        '. title .'
+        '. table .'
       }
-      .header {
-        
-        
+      .title {
+        text-align: center;
+        background-color: teal;
+        grid-area: title;        
       }
+      .table {
+        grid-area: table;
+      }
+      #result-box {
+        text-align: center;
+        font-size: 26px;
+        margin-top: 15px;
+      }
+
     
     </style>
   </head>
@@ -21,8 +34,23 @@
   <body>
     <div class="container">
 
-      <div class="header">
+      <div class="title">
         <h1>MIXED DRINKS SQL EXERCISE</h1>
+      </div>
+
+      <div class="table">
+    
+        <script>         
+
+
+        </script>
+
+        <div id="result-box">
+          <span id="results">Some Mixed Drink JSON</span>
+        </div>
+
+
+
       </div>
 
 
