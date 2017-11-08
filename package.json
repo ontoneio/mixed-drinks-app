@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "db:create": "createdb mixed-drinks && psql mixed-drinks < db/schema.sql",
+    "db:reset": "dropdb mixed-drinks && npm run db:create"
   },
   "repository": {
     "type": "git",
