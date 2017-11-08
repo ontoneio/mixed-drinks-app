@@ -5,14 +5,29 @@
 -- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- SET FOREIGN_KEY_CHECKS=0;
 
--- ---
--- Table 'ingredients'
---
--- ---
 DROP DATABASE IF EXISTS mixedDrinks;
 CREATE DATABASE mixedDrinks;
 
 \c mixedDrinks;
+
+-- ---
+-- Table 'cocktail_ingredients'
+--
+-- ---
+
+-- DROP TABLE IF EXISTS `cocktail_ingredients`;
+
+CREATE TABLE `cocktail_ingredients` (
+  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `cocktail_id` INTEGER NULL DEFAULT NULL,
+  `ingredient_id` INTEGER NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'ingredients'
+--
+-- ---
 
 -- DROP TABLE IF EXISTS `ingredients`;
 
@@ -36,20 +51,6 @@ CREATE TABLE `cocktails` (
 );
 
 -- ---
--- Table 'cocktail_ingredients'
---
--- ---
-
--- DROP TABLE IF EXISTS `cocktail_ingredients`;
-
-CREATE TABLE `cocktail_ingredients` (
-  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `cocktail_id` INTEGER NULL DEFAULT NULL,
-  `ingredient_id` INTEGER NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-);
-
--- ---
 -- Foreign Keys
 -- ---
 
@@ -60,17 +61,17 @@ ALTER TABLE `cocktail_ingredients` ADD FOREIGN KEY (ingredient_id) REFERENCES `i
 -- Table Properties
 -- ---
 
+-- ALTER TABLE `cocktail_ingredients` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `ingredients` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `cocktails` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `cocktail_ingredients` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ---
 -- Test Data
 -- ---
 
+-- INSERT INTO `cocktail_ingredients` (`id`,`cocktail_id`,`ingredient_id`) VALUES
+-- ('','','');
 -- INSERT INTO `ingredients` (`id`,`ingredient_name`) VALUES
 -- ('','');
 -- INSERT INTO `cocktails` (`id`,`cocktail_name`) VALUES
 -- ('','');
--- INSERT INTO `cocktail_ingredients` (`id`,`cocktail_id`,`ingredient_id`) VALUES
--- ('','','');
