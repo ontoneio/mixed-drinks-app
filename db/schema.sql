@@ -9,7 +9,7 @@
 -- CREATE DATABASE mixedDrinks;
 
 \c mixed-drinks;
-
+-- hi
 -- ---
 -- Table 'cocktail_ingredients'
 --
