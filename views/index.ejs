@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>    
+  <head>
     <meta charset="UTF-8">
     <title>title</title>
     <style>
@@ -11,21 +11,28 @@
         height: auto;
       }
       .header {
-        
-        
+
+
       }
-    
+
     </style>
   </head>
 
   <body>
     <div class="container">
 
-      <div class="header">
+      <div class="title">
         <h1>MIXED DRINKS SQL EXERCISE</h1>
       </div>
-
-
+      <div class="table">
+        <p>Add an ingredient</p>
+        <form action="/ingredients/add" method="POST">
+          <label>Please enter the ingredient name
+            <input type="text" name="ingredient_name">
+          </label>
+          <button type="submit">Add</button>
+        </form>
+      </div>
 
 
     </div>
